@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="please_specify" label="Please specify" language="en" table="x_241348_dxcapp_approval_request">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>please_specify</element>
+            <help/>
+            <hint/>
+            <label>Please specify</label>
+            <language>en</language>
+            <name>x_241348_dxcapp_approval_request</name>
+            <plural>Please specifies</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-06-21 10:58:40</sys_created_on>
+            <sys_id>d6d7cfc637b213002efeded993990ea5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Please specify</sys_name>
+            <sys_package display_value="DXC Docs Approval" source="x_241348_dxcapp">a05a6686377213002efeded993990e4c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="DXC Docs Approval">a05a6686377213002efeded993990e4c</sys_scope>
+            <sys_update_name>sys_documentation_x_241348_dxcapp_approval_request_please_specify_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-06-21 10:58:40</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

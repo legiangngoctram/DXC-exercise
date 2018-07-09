@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sc_cat_item_catalog">
+    <sc_cat_item_catalog action="INSERT_OR_UPDATE">
+        <sc_cat_item display_value="Monthly DXC Report">a16c7556370713002efeded993990e2f</sc_cat_item>
+        <sc_catalog display_value="DXC Homepage">fac6b552370713002efeded993990ec0</sc_catalog>
+        <sys_class_name>sc_cat_item_catalog</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-07-04 10:23:57</sys_created_on>
+        <sys_id>249c7556370713002efeded993990e88</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DXC Homepage.Monthly DXC Report</sys_name>
+        <sys_package display_value="DXC Docs Approval" source="x_241348_dxcapp">a05a6686377213002efeded993990e4c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DXC Docs Approval">a05a6686377213002efeded993990e4c</sys_scope>
+        <sys_update_name>sc_cat_item_catalog_249c7556370713002efeded993990e88</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-07-04 10:23:57</sys_updated_on>
+    </sc_cat_item_catalog>
+</record_update>

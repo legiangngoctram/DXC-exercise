@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sysauto_report">
+    <sysauto_report action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <address_list/>
+        <condition/>
+        <conditional>false</conditional>
+        <group_list>8ed82246377213002efeded993990e72,7739ee06377213002efeded993990e99,a1996286377213002efeded993990efb</group_list>
+        <include_detail>false</include_detail>
+        <include_with/>
+        <name>Scheduled Execution of Monthly report with all fields</name>
+        <omit_if_no_records>false</omit_if_no_records>
+        <output_type>XLSX</output_type>
+        <page_height_in_pixels>612</page_height_in_pixels>
+        <page_size>Letter</page_size>
+        <page_width_in_pixels>792</page_width_in_pixels>
+        <report display_value="DXC - Report request in week">a07cce22378313002efeded993990ebf</report>
+        <report_body><![CDATA[<p>Dear User &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>Please find the attached for monthly&nbsp;DXC status report</p>
+<p>Regards,</p>
+<p>Application Administrator<br /> DXC VietNam</p>
+<p>This is an automatic system generated email. Please do not reply to this email.</p>]]></report_body>
+        <report_title>Monthly DXC Status Report</report_title>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>28</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2018-07-05 03:23:02</run_start>
+        <run_time>1970-01-01 16:30:00</run_time>
+        <run_type>monthly</run_type>
+        <sys_class_name>sysauto_report</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-07-05 04:46:45</sys_created_on>
+        <sys_id>7cd52daa370313002efeded993990edf</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Scheduled Execution of Monthly report with all fields</sys_name>
+        <sys_package display_value="DXC Docs Approval" source="x_241348_dxcapp">a05a6686377213002efeded993990e4c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DXC Docs Approval">a05a6686377213002efeded993990e4c</sys_scope>
+        <sys_update_name>sysauto_report_7cd52daa370313002efeded993990edf</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-07-05 06:39:40</sys_updated_on>
+        <upgrade_safe>false</upgrade_safe>
+        <user_list/>
+        <zip>false</zip>
+    </sysauto_report>
+</record_update>

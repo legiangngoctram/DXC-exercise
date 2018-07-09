@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-06-27 02:34:01</sys_created_on>
+        <sys_id>bddd040837cb13002efeded993990ec7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_241348_dxcapp_approval_request.x_241348_dxcapp.DXC Employee</sys_name>
+        <sys_package display_value="DXC Docs Approval" source="x_241348_dxcapp">a05a6686377213002efeded993990e4c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DXC Docs Approval">a05a6686377213002efeded993990e4c</sys_scope>
+        <sys_security_acl display_value="x_241348_dxcapp_approval_request">56d7cfc637b213002efeded993990e85</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_bddd040837cb13002efeded993990ec7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-06-27 02:34:01</sys_updated_on>
+        <sys_user_role display_value="x_241348_dxcapp.DXC Employee" name="x_241348_dxcapp.DXC Employee">ade0934e37b213002efeded993990ed9</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sysrule_approvals">
+    <sysrule_approvals action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="sysapproval_group">approval=requested^EQ<item endquery="false" field="approval" goto="false" newquery="false" operator="=" or="false" value="requested"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <description/>
+        <group display_value="DXC Leader" name="DXC Leader">8ed82246377213002efeded993990e72</group>
+        <match_conditions>ALL</match_conditions>
+        <name>DXC approval</name>
+        <optional_group/>
+        <order>100</order>
+        <run_rule_before>true</run_rule_before>
+        <script/>
+        <set_state>approved</set_state>
+        <sys_class_name>sysrule_approvals</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-07-03 08:00:08</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a8c090ce378313002efeded993990e77</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DXC approval</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="DXC Docs Approval" source="x_241348_dxcapp">a05a6686377213002efeded993990e4c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DXC Docs Approval">a05a6686377213002efeded993990e4c</sys_scope>
+        <sys_update_name>sysrule_approvals_a8c090ce378313002efeded993990e77</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-07-03 08:00:08</sys_updated_on>
+        <table>sysapproval_group</table>
+        <user/>
+    </sysrule_approvals>
+</record_update>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" label="Approval Request" max_length="40" name="x_241348_dxcapp_approval_request" type="collection">
+        <element label="Approved with condition" max_length="40" name="approved_with_condition" type="boolean"/>
+        <element label="Comments" max_length="4000" name="comments" type="journal"/>
+        <element label="Conditions" max_length="4000" name="conditions" type="journal"/>
+        <element label="DXC title" mandatory="true" max_length="100" name="dxc_title" type="string"/>
+        <element label="DXC Web Link" mandatory="true" max_length="300" name="dxc_web_link" type="url"/>
+        <element label="Exchange Rate" mandatory="true" max_length="40" name="exchange_rate" type="float"/>
+        <element label="GBP" mandatory="true" max_length="20" name="gbp" type="decimal"/>
+        <element label="LBU" mandatory="true" max_length="32" name="lbu" reference="x_241348_dxcapp_local_business_unit" type="reference"/>
+        <element label="Leader agree" mandatory="true" max_length="40" name="leader_agree" type="boolean"/>
+        <element choice="1" label="Level of approval" mandatory="true" max_length="40" name="level_of_approval" type="choice">
+            <choice>
+                <element label="DXC Leader" value="1"/>
+                <element label="DXC Leader &amp; PM" value="2"/>
+            </choice>
+        </element>
+        <element label="Local Currency" mandatory="true" max_length="32" name="local_currency" reference="fx_currency" type="reference"/>
+        <element label="Next approver" mandatory="true" max_length="100" name="next_approver" type="string"/>
+        <element default="javascript:getNextObjNumberPadded();" display="true" dynamic_default_value="fdcb83a85f220100a9ad2572f2b4773c" label="Number" mandatory="true" max_length="40" name="number" type="string" use_dynamic_default="true"/>
+        <element label="Please specify" mandatory="true" max_length="100" name="please_specify" type="string"/>
+        <element label="Reviewing" max_length="40" name="reviewing" type="boolean"/>
+        <element choice="1" default="Draft" label="State" mandatory="true" max_length="40" name="state" type="choice">
+            <choice>
+                <element label="Approve With Condition" value="ApproveWithCondition"/>
+                <element label="Approved" value="Approved"/>
+                <element label="Cancelled" value="Cancelled"/>
+                <element label="Decline" value="Decline"/>
+                <element label="Draft" value="Draft"/>
+                <element label="Waitting for Leader" value="WaittingLeader"/>
+                <element label="Waitting for PM" value="WaittingPMApprover"/>
+            </choice>
+        </element>
+        <element label="Submission Date" mandatory="true" max_length="100" name="submission_date" type="string"/>
+        <element label="Submitted By" max_length="32" name="submitted_by" reference="sys_user" type="reference"/>
+        <element label="Sub Category" mandatory="true" max_length="32" name="sub_category" reference="x_241348_dxcapp_sub_category" type="reference"/>
+        <index name="index">
+            <element name="sub_category"/>
+        </index>
+        <index name="index2">
+            <element name="submitted_by"/>
+        </index>
+        <index name="index3">
+            <element name="local_currency"/>
+        </index>
+        <index name="index4">
+            <element name="lbu"/>
+        </index>
+    </element>
+</database>

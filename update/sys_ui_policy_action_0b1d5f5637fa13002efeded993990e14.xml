@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <disabled>ignore</disabled>
+        <field>conditions</field>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-06-22 07:10:43</sys_created_on>
+        <sys_id>0b1d5f5637fa13002efeded993990e14</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>conditions</sys_name>
+        <sys_package display_value="DXC Docs Approval" source="x_241348_dxcapp">a05a6686377213002efeded993990e4c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DXC Docs Approval">a05a6686377213002efeded993990e4c</sys_scope>
+        <sys_update_name>sys_ui_policy_action_0b1d5f5637fa13002efeded993990e14</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-06-22 07:14:44</sys_updated_on>
+        <table>x_241348_dxcapp_approval_request</table>
+        <ui_policy display_value="Approve  with  Conditions check">541113de37ba13002efeded993990edc</ui_policy>
+        <visible>true</visible>
+    </sys_ui_policy_action>
+</record_update>
