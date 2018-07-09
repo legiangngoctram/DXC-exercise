@@ -5,13 +5,13 @@
             <element>conditions</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-07-06 03:48:34</sys_created_on>
-            <sys_id>d4457a32374313002efeded993990ee3</sys_id>
+            <sys_created_on>2018-07-09 07:12:51</sys_created_on>
+            <sys_id>c6c0cffb378313002efeded993990e64</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Comments &amp; Conditions" display_value="Comments &amp; Conditions" name="x_241348_dxcapp_approval_request" sys_domain="global" view="590c2b9e37fa13002efeded993990eb8">dd0c2b9e37fa13002efeded993990ebb</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-07-06 03:48:34</sys_updated_on>
+            <sys_updated_on>2018-07-09 07:12:51</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -19,13 +19,13 @@
             <element>comments</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-07-06 03:48:34</sys_created_on>
-            <sys_id>58457a32374313002efeded993990ee3</sys_id>
+            <sys_created_on>2018-07-09 07:12:51</sys_created_on>
+            <sys_id>8ec0cffb378313002efeded993990e64</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Comments &amp; Conditions" display_value="Comments &amp; Conditions" name="x_241348_dxcapp_approval_request" sys_domain="global" view="590c2b9e37fa13002efeded993990eb8">dd0c2b9e37fa13002efeded993990ebb</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-07-06 03:48:34</sys_updated_on>
+            <sys_updated_on>2018-07-09 07:12:51</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -33,13 +33,13 @@
             <element>activity.xml</element>
             <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-07-06 03:48:34</sys_created_on>
-            <sys_id>d8457a32374313002efeded993990ee3</sys_id>
+            <sys_created_on>2018-07-09 07:12:51</sys_created_on>
+            <sys_id>02c0cffb378313002efeded993990e65</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter display_value="Activities (filtered)">444ea5c6bf310100e628555b3f0739d6</sys_ui_formatter>
             <sys_ui_section caption="Comments &amp; Conditions" display_value="Comments &amp; Conditions" name="x_241348_dxcapp_approval_request" sys_domain="global" view="590c2b9e37fa13002efeded993990eb8">dd0c2b9e37fa13002efeded993990ebb</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-07-06 03:48:34</sys_updated_on>
+            <sys_updated_on>2018-07-09 07:12:51</sys_updated_on>
             <sys_user/>
             <type>formatter</type>
         </sys_ui_element>

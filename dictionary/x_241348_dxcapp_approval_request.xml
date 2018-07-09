@@ -2,8 +2,8 @@
 <database>
     <element audit="true" label="Approval Request" max_length="40" name="x_241348_dxcapp_approval_request" type="collection">
         <element label="Approved with condition" max_length="40" name="approved_with_condition" type="boolean"/>
-        <element label="Comments" max_length="4000" name="comments" type="journal"/>
-        <element label="Conditions" max_length="4000" name="conditions" type="journal"/>
+        <element label="Comments" max_length="4000" name="comments" type="journal_input"/>
+        <element label="Conditions" max_length="4000" name="conditions" type="journal_input"/>
         <element label="DXC title" mandatory="true" max_length="100" name="dxc_title" type="string"/>
         <element label="DXC Web Link" mandatory="true" max_length="300" name="dxc_web_link" type="url"/>
         <element label="Exchange Rate" mandatory="true" max_length="40" name="exchange_rate" type="float"/>
