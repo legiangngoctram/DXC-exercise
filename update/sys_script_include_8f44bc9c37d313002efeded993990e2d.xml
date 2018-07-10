@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_241348_dxcapp.DXC_requestForApproval_updateApprovalRecord</api_name>
+        <client_callable>false</client_callable>
+        <description>update state of the reference record on sysapproval_approver table</description>
+        <name>DXC_requestForApproval_updateApprovalRecord</name>
+        <script><![CDATA[//sys_id : id of the current request record , uState: state that you will update to
+//userID : the current approver ID
+var DXC_requestForApproval_updateApprovalRecord = Class.create();
+DXC_requestForApproval_updateApprovalRecord.prototype = {
+	initialize: function(){
+	},
+	
+	updateApproval: function(userID,sys_id,uState) {
+		gs.info('sysID = '+ sys_id);
+		//find approval record
+		var approve = new GlideRecord('sysapproval_approver');
+		approve.addQuery('approver',userID);
+		approve.addQuery('document_id',sys_id);
+		approve.query();
+// 		gs.info('Number of approvals: ' + approve.getRowCount());
+		if(approve.next()){
+			//set state = approved
+			approve.state = uState;
+			approve.update();
+		}
+	},
+	
+	type: 'DXC_requestForApproval_updateApprovalRecord'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-07-10 10:29:05</sys_created_on>
+        <sys_id>8f44bc9c37d313002efeded993990e2d</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>DXC_requestForApproval_updateApprovalRecord</sys_name>
+        <sys_package display_value="DXC Docs Approval" source="x_241348_dxcapp">a05a6686377213002efeded993990e4c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="DXC Docs Approval">a05a6686377213002efeded993990e4c</sys_scope>
+        <sys_update_name>sys_script_include_8f44bc9c37d313002efeded993990e2d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-07-10 10:57:55</sys_updated_on>
+    </sys_script_include>
+</record_update>
