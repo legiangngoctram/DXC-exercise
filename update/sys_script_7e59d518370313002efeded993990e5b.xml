@@ -53,12 +53,13 @@
 					current.local_currency = lbu.getValue('default_currency');
 				}
 			}
-		}else if (current.lbu == ''){		
-			//if country = null, default = DXC Viet Nam
-			current.lbu = '90728b0637b213002efeded993990e1e';
-			//local currency = VND
-			current.local_currency = 'a17182e30a0a0b5400f8d381df90246f';
 		}
+// 		else if (current.lbu == ''){		
+// 			//if country = null, default = DXC Viet Nam
+// 			current.lbu = '90728b0637b213002efeded993990e1e';
+// 			//local currency = VND
+// 			current.local_currency = 'a17182e30a0a0b5400f8d381df90246f';
+// 		}
 		
 	}
 	var exchange_rate = new GlideRecord('x_241348_dxcapp_dxc_exchange_rate');
@@ -75,7 +76,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>7e59d518370313002efeded993990e5b</sys_id>
-        <sys_mod_count>61</sys_mod_count>
+        <sys_mod_count>62</sys_mod_count>
         <sys_name>DXC_Create New DXC Request_Display</sys_name>
         <sys_overrides/>
         <sys_package display_value="DXC Docs Approval" source="x_241348_dxcapp">a05a6686377213002efeded993990e4c</sys_package>
@@ -83,8 +84,8 @@
         <sys_scope display_value="DXC Docs Approval">a05a6686377213002efeded993990e4c</sys_scope>
         <sys_update_name>sys_script_7e59d518370313002efeded993990e5b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-07-09 04:36:05</sys_updated_on>
-        <template/>
+        <sys_updated_on>2018-07-11 08:55:17</sys_updated_on>
+        <template>lbu=90728b0637b213002efeded993990e1e^local_currency=a17182e30a0a0b5400f8d381df90246f^EQ</template>
         <when>before_display</when>
     </sys_script>
     <sys_translated_text action="delete_multiple" query="documentkey=7e59d518370313002efeded993990e5b"/>
