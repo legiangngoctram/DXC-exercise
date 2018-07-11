@@ -17,19 +17,25 @@ if (gs.hasRole('x_241348_dxcapp.DXC PM') && current.state == 'WaittingPMApprover
 if (gs.hasRole('x_241348_dxcapp.DXC Leader') && current.state == 'WaittingLeader')
 	answer = true;
 if (gs.hasRole('x_241348_dxcapp.DXC Employee') && current.submitted_by == gs.getUserID())
-	answer = true;]]></script>
+	answer = true;
+if (current.state == 'ApproveWithCondition'){
+	if (gs.hasRole('x_241348_dxcapp.DXC PM') && current.next_approver == 'DXC PM')
+		answer = true;
+	if(gs.hasRole('x_241348_dxcapp.DXC Leader') && current.next_approver == 'DXC leader')
+		answer = true;
+}]]></script>
         <sys_class_name>sys_security_acl</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-07-05 09:53:45</sys_created_on>
         <sys_id>00ad3e22370713002efeded993990efc</sys_id>
-        <sys_mod_count>17</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_name>x_241348_dxcapp_approval_request.comments</sys_name>
         <sys_package display_value="DXC Docs Approval" source="x_241348_dxcapp">a05a6686377213002efeded993990e4c</sys_package>
         <sys_policy/>
         <sys_scope display_value="DXC Docs Approval">a05a6686377213002efeded993990e4c</sys_scope>
         <sys_update_name>sys_security_acl_00ad3e22370713002efeded993990efc</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-07-09 03:16:49</sys_updated_on>
+        <sys_updated_on>2018-07-10 11:46:27</sys_updated_on>
         <type display_value="record">record</type>
     </sys_security_acl>
 </record_update>
