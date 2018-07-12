@@ -3,33 +3,49 @@
     <sys_script_include action="INSERT_OR_UPDATE">
         <access>public</access>
         <active>true</active>
-        <api_name>x_241348_dxcapp.dxc_approvalApplication_getGroupID</api_name>
+        <api_name>x_241348_dxcapp.dxc_approvalApplication_getData</api_name>
         <client_callable>true</client_callable>
         <description>return sys_id of the group on flowflow approval</description>
-        <name>dxc_approvalApplication_getGroupID</name>
-        <script><![CDATA[var dxc_approvalApplication_getGroupID = Class.create();
-dxc_approvalApplication_getGroupID.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
-	getdata: function(table,field,value){
+        <name>dxc_approvalApplication_getData</name>
+        <script><![CDATA[//get data on specific info:
+//field : search field , rfield : return field
+var dxc_approvalApplication_getData = Class.create();
+dxc_approvalApplication_getData.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	getdata: function(table,field,value,rfield){
 		var temp = new GlideRecord(table);
 		temp.addQuery(field,value);
 		temp.query();
 		if(temp.next()){
-			return temp.sys_id;
+			return temp.getValue(rfield);
 		}
 	},
-    type: 'dxc_approvalApplication_getGroupID'
+	getdataAjax: function(){
+		var field = this.getParameter('sysparm_field');
+		var value = this.getParameter('sysparm_value');
+		var rfield = this.getParameter('sysparm_rfield');
+		
+		var temp = new GlideRecord('fx_rate');
+		temp.addQuery(field,value);
+		temp.query();
+		if(temp.next()){
+			return temp.getValue(rfield);
+		}
+		return 'no';
+	},
+	
+    type: 'dxc_approvalApplication_getData'
 });]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-07-11 10:23:59</sys_created_on>
         <sys_id>608f75ac37d313002efeded993990ebd</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>dxc_approvalApplication_getGroupID</sys_name>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>dxc_approvalApplication_getData</sys_name>
         <sys_package display_value="DXC Docs Approval" source="x_241348_dxcapp">a05a6686377213002efeded993990e4c</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="DXC Docs Approval">a05a6686377213002efeded993990e4c</sys_scope>
         <sys_update_name>sys_script_include_608f75ac37d313002efeded993990ebd</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-07-11 10:23:59</sys_updated_on>
+        <sys_updated_on>2018-07-12 10:26:57</sys_updated_on>
     </sys_script_include>
 </record_update>

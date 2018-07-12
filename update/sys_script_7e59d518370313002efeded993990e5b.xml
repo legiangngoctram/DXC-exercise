@@ -31,9 +31,9 @@
         <rest_variables/>
         <role_conditions>x_241348_dxcapp.DXC Employee</role_conditions>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
-
-	// Add your code here
 	
+	// Add your code here
+	var foo = new dxc_approvalApplication_getData();
 	//get country id by dot walking from user info
 	var user = new GlideRecord('sys_user');
 	if (user.get(gs.getUserID())){
@@ -41,42 +41,36 @@
 		
 		if (country != ''){
 			//find country sys_id by query country name
-			var core_c = new GlideRecord('core_country');
-			core_c.addQuery('name',country);
-			core_c.query();
-			if (core_c.next()){
-				//get lbu by country sys_id
-				var lbu = new GlideRecord('x_241348_dxcapp_local_business_unit');
-				if (lbu.get('country',core_c.getValue('sys_id'))){
-					current.lbu = lbu.getValue('sys_id');
-					//get local currency
-					current.local_currency = lbu.getValue('default_currency');
+			// 			var core_c = new GlideRecord('core_country');
+			// 			core_c.addQuery('name',country);
+			// 			core_c.query();
+			// 			if (core_c.next()){
+				var core_c_id = foo.getdata('core_country','name',country,'sys_id');
+				if(core_c_id != ''){
+					//get lbu by country sys_id
+					var lbu = new GlideRecord('x_241348_dxcapp_local_business_unit');
+					if (lbu.get('country',core_c_id)){
+						current.lbu = lbu.getValue('sys_id');
+						//get local currency
+						current.local_currency = lbu.getValue('default_currency');
+					}
 				}
+				// 			}
 			}
-		}
-// 		else if (current.lbu == ''){		
-// 			//if country = null, default = DXC Viet Nam
-// 			current.lbu = '90728b0637b213002efeded993990e1e';
-// 			//local currency = VND
-// 			current.local_currency = 'a17182e30a0a0b5400f8d381df90246f';
-// 		}
+			
+		}		
+		current.exchange_rate = foo.getdata('fx_rate','currency',current.local_currency,'rate');
+		//calculate GBP = exchange rate * GBP/USD(1.5700)
+		current.gbp = current.exchange_rate * 1.5700;
 		
-	}
-	var exchange_rate = new GlideRecord('x_241348_dxcapp_dxc_exchange_rate');
-	if (exchange_rate.get('currency',current.local_currency)){
-		current.exchange_rate = exchange_rate.getValue('rate');
-	}
-	//calculate GBP = exchange rate * GBP/USD(1.5700)
-	current.gbp = current.exchange_rate * 1.5700;
-	
-})(current, previous);]]></script>
+	})(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-06-28 03:09:12</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>7e59d518370313002efeded993990e5b</sys_id>
-        <sys_mod_count>62</sys_mod_count>
+        <sys_mod_count>72</sys_mod_count>
         <sys_name>DXC_Create New DXC Request_Display</sys_name>
         <sys_overrides/>
         <sys_package display_value="DXC Docs Approval" source="x_241348_dxcapp">a05a6686377213002efeded993990e4c</sys_package>
@@ -84,7 +78,7 @@
         <sys_scope display_value="DXC Docs Approval">a05a6686377213002efeded993990e4c</sys_scope>
         <sys_update_name>sys_script_7e59d518370313002efeded993990e5b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-07-11 08:55:17</sys_updated_on>
+        <sys_updated_on>2018-07-12 09:56:54</sys_updated_on>
         <template>lbu=90728b0637b213002efeded993990e1e^local_currency=a17182e30a0a0b5400f8d381df90246f^EQ</template>
         <when>before_display</when>
     </sys_script>
