@@ -22,12 +22,12 @@
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>9d0cab9e37fa13002efeded993990e02</sys_id>
-            <sys_mod_count>4</sys_mod_count>
+            <sys_mod_count>6</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="x_241348_dxcapp_approval_request" name="x_241348_dxcapp_approval_request" sys_domain="global" view="590c2b9e37fa13002efeded993990eb8">510c2b9e37fa13002efeded993990ebd</sys_ui_form>
             <sys_ui_section caption="Comments &amp; Conditions" display_value="Comments &amp; Conditions" name="x_241348_dxcapp_approval_request" sys_domain="global" view="590c2b9e37fa13002efeded993990eb8">dd0c2b9e37fa13002efeded993990ebb</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-07-05 10:13:36</sys_updated_on>
+            <sys_updated_on>2018-07-16 07:37:24</sys_updated_on>
         </sys_ui_form_section>
         <sys_ui_form action="INSERT_OR_UPDATE">
             <name>x_241348_dxcapp_approval_request</name>

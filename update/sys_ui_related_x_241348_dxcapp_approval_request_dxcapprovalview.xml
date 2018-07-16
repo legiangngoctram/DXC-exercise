@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_related sys_domain="global" table="x_241348_dxcapp_approval_request" version="2" view="DXCApprovalView">
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Approval Request - DXCApprovalView" name="x_241348_dxcapp_approval_request" related_list="NULL" sys_domain="global" view="590c2b9e37fa13002efeded993990eb8">864e1b0637d313002efeded993990e3c</list_id>
+            <order_by/>
+            <position>0</position>
+            <related_list/>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-07-16 09:08:05</sys_created_on>
+            <sys_id>4e4e1b0637d313002efeded993990e3c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-07-16 09:08:05</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list action="INSERT_OR_UPDATE">
+            <calculated_name>Approval Request - DXCApprovalView</calculated_name>
+            <filter/>
+            <name>x_241348_dxcapp_approval_request</name>
+            <order_by/>
+            <position/>
+            <related_list/>
+            <sys_class_name>sys_ui_related_list</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-07-16 09:08:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>864e1b0637d313002efeded993990e3c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Approval Request - DXCApprovalView</sys_name>
+            <sys_package display_value="DXC Docs Approval" source="x_241348_dxcapp">a05a6686377213002efeded993990e4c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="DXC Docs Approval">a05a6686377213002efeded993990e4c</sys_scope>
+            <sys_update_name>sys_ui_related_x_241348_dxcapp_approval_request_DXCApprovalView</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-07-16 09:08:05</sys_updated_on>
+            <sys_user/>
+            <view display_value="DXCApprovalView" name="DXCApprovalView">590c2b9e37fa13002efeded993990eb8</view>
+            <view_name/>
+        </sys_ui_related_list>
+    </sys_ui_related>
+</record_update>
