@@ -2,26 +2,26 @@
 <record_update table="sys_process_flow">
     <sys_process_flow action="INSERT_OR_UPDATE">
         <active>true</active>
-        <condition table="x_241348_dxcapp_approval_request">state=ApproveWithCondition^next_approver=DXC Leader^EQ<item endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="ApproveWithCondition"/>
-            <item endquery="false" field="next_approver" goto="false" newquery="false" operator="=" or="false" value="DXC Leader"/>
+        <condition table="x_241348_dxcapp_approval_request">state=ApproveWithCondition^next_approver=DXC PM^EQ<item endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="ApproveWithCondition"/>
+            <item endquery="false" field="next_approver" goto="false" newquery="false" operator="=" or="false" value="DXC PM"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </condition>
         <description/>
         <label>Approved with conditions</label>
-        <name>DXC approval request - condition  - Lead</name>
-        <order>200</order>
+        <name>DXC approval request - condition  - PM</name>
+        <order>300</order>
         <sys_class_name>sys_process_flow</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-07-03 04:17:32</sys_created_on>
-        <sys_id>6bce93f5370313002efeded993990eb4</sys_id>
-        <sys_mod_count>10</sys_mod_count>
-        <sys_name>DXC approval request - condition  - Lead</sys_name>
+        <sys_created_on>2018-07-16 10:22:45</sys_created_on>
+        <sys_id>775fe74e37d313002efeded993990e37</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DXC approval request - condition  - PM</sys_name>
         <sys_package display_value="DXC Docs Approval" source="x_241348_dxcapp">a05a6686377213002efeded993990e4c</sys_package>
         <sys_policy/>
         <sys_scope display_value="DXC Docs Approval">a05a6686377213002efeded993990e4c</sys_scope>
-        <sys_update_name>sys_process_flow_6bce93f5370313002efeded993990eb4</sys_update_name>
+        <sys_update_name>sys_process_flow_775fe74e37d313002efeded993990e37</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-07-16 10:20:51</sys_updated_on>
+        <sys_updated_on>2018-07-16 10:22:45</sys_updated_on>
         <table>x_241348_dxcapp_approval_request</table>
     </sys_process_flow>
 </record_update>

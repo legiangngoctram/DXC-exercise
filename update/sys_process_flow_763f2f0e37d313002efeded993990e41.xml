@@ -2,25 +2,25 @@
 <record_update table="sys_process_flow">
     <sys_process_flow action="INSERT_OR_UPDATE">
         <active>true</active>
-        <condition table="x_241348_dxcapp_approval_request">state=WaittingLeader^EQ<item endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="WaittingLeader"/>
+        <condition table="x_241348_dxcapp_approval_request">state=WaittingPMApprover^EQ<item endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="WaittingPMApprover"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </condition>
         <description/>
-        <label>Waiting Leader approval</label>
+        <label>Waiting PM approval</label>
         <name>DXC approval request - waitting approval</name>
-        <order>150</order>
+        <order>250</order>
         <sys_class_name>sys_process_flow</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-07-05 08:03:41</sys_created_on>
-        <sys_id>d115e26237c313002efeded993990e08</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_created_on>2018-07-16 10:22:08</sys_created_on>
+        <sys_id>763f2f0e37d313002efeded993990e41</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>DXC approval request - waitting approval</sys_name>
         <sys_package display_value="DXC Docs Approval" source="x_241348_dxcapp">a05a6686377213002efeded993990e4c</sys_package>
         <sys_policy/>
         <sys_scope display_value="DXC Docs Approval">a05a6686377213002efeded993990e4c</sys_scope>
-        <sys_update_name>sys_process_flow_d115e26237c313002efeded993990e08</sys_update_name>
+        <sys_update_name>sys_process_flow_763f2f0e37d313002efeded993990e41</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-07-16 10:20:42</sys_updated_on>
+        <sys_updated_on>2018-07-16 10:22:08</sys_updated_on>
         <table>x_241348_dxcapp_approval_request</table>
     </sys_process_flow>
 </record_update>
