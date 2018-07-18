@@ -7,7 +7,7 @@
         <element label="DXC title" mandatory="true" max_length="100" name="dxc_title" type="string"/>
         <element label="DXC Web Link" mandatory="true" max_length="300" name="dxc_web_link" type="url"/>
         <element label="Exchange Rate" mandatory="true" max_length="40" name="exchange_rate" type="float"/>
-        <element label="GBP" mandatory="true" max_length="20" name="gbp" read_only="true" type="decimal"/>
+        <element label="GBP" max_length="20" name="gbp" read_only="true" type="decimal"/>
         <element label="LBU" mandatory="true" max_length="32" name="lbu" reference="x_241348_dxcapp_local_business_unit" type="reference"/>
         <element label="Leader agree" mandatory="true" max_length="40" name="leader_agree" type="boolean"/>
         <element choice="1" label="Level of approval" mandatory="true" max_length="40" name="level_of_approval" type="choice">

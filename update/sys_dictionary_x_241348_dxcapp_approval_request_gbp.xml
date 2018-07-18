@@ -34,7 +34,7 @@
         <function_definition/>
         <function_field>false</function_field>
         <internal_type display_value="Decimal">decimal</internal_type>
-        <mandatory>true</mandatory>
+        <mandatory>false</mandatory>
         <max_length>20</max_length>
         <name>x_241348_dxcapp_approval_request</name>
         <next_element/>
@@ -55,14 +55,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-06-21 10:58:38</sys_created_on>
         <sys_id>4c16c38637b213002efeded993990e89</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>GBP</sys_name>
         <sys_package display_value="DXC Docs Approval" source="x_241348_dxcapp">a05a6686377213002efeded993990e4c</sys_package>
         <sys_policy/>
         <sys_scope display_value="DXC Docs Approval">a05a6686377213002efeded993990e4c</sys_scope>
         <sys_update_name>sys_dictionary_x_241348_dxcapp_approval_request_gbp</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-07-18 07:31:11</sys_updated_on>
+        <sys_updated_on>2018-07-18 08:51:40</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
