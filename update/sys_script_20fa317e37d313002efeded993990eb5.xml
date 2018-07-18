@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>true</abort_action>
+        <access>package_private</access>
+        <action_delete>true</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>true</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>sys_attachment</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="sys_attachment">sys_created_by!=javascript:gs.getUserName();^EQ<item endquery="false" field="sys_created_by" goto="false" newquery="false" operator="!=" or="false" value="javascript:gs.getUserName();"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message><![CDATA[<p><strong>you can not update this attachment !</strong></p>]]></message>
+        <name>DXC_create_prevent update attachment</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions>x_241348_dxcapp.DXC Employee</role_conditions>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+	
+	// Add your code here
+	if (current.sys_created_by != gs.getUserName()){
+		current.setAbortAction(true);
+	}
+	
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-07-18 09:50:37</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>20fa317e37d313002efeded993990eb5</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>DXC_create_prevent update attachment</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="DXC Docs Approval" source="x_241348_dxcapp">a05a6686377213002efeded993990e4c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DXC Docs Approval">a05a6686377213002efeded993990e4c</sys_scope>
+        <sys_update_name>sys_script_20fa317e37d313002efeded993990eb5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-07-18 10:16:31</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=20fa317e37d313002efeded993990eb5"/>
+</record_update>
