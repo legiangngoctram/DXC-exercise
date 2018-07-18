@@ -50,7 +50,6 @@
 					//get lbu by country sys_id
 					var lbu = new GlideRecord('x_241348_dxcapp_local_business_unit');
 					if (lbu.get('country',core_c_id)){
-// 						current.lbu = lbu.getValue('sys_id');
 						current.lbu = lbu.sys_id.toString();
 						//get local currency
 						current.local_currency = lbu.getValue('default_currency');
@@ -63,8 +62,9 @@
 		var exchange = foo.getdata('fx_rate',
 								   'currency',current.local_currency,'rate');
 		current.exchange_rate = exchange;
-		//calculate GBP = exchange rate * GBP/USD(1.5700) 
-		current.gbp = 0;
+	 	//get GBP by API
+// 	var gbp = new x_241348_dxcapp.dxc_GBP_Converter();
+// 	current.gbp = gbp.getGBP(current.local_currency.getDisplayValue() +'_GBP');
 		
 	})(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
@@ -73,7 +73,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>7e59d518370313002efeded993990e5b</sys_id>
-        <sys_mod_count>86</sys_mod_count>
+        <sys_mod_count>117</sys_mod_count>
         <sys_name>DXC_Create New DXC Request_Display</sys_name>
         <sys_overrides/>
         <sys_package display_value="DXC Docs Approval" source="x_241348_dxcapp">a05a6686377213002efeded993990e4c</sys_package>
@@ -81,7 +81,7 @@
         <sys_scope display_value="DXC Docs Approval">a05a6686377213002efeded993990e4c</sys_scope>
         <sys_update_name>sys_script_7e59d518370313002efeded993990e5b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-07-13 06:41:43</sys_updated_on>
+        <sys_updated_on>2018-07-18 07:28:43</sys_updated_on>
         <template>lbu=90728b0637b213002efeded993990e1e^local_currency=a17182e30a0a0b5400f8d381df90246f^EQ</template>
         <when>before_display</when>
     </sys_script>

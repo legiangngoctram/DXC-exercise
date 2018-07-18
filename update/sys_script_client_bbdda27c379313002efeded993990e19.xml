@@ -12,25 +12,37 @@
         <order/>
         <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
 	if (isLoading || newValue === '') {
-		// 		g_form.setValue('exchange_rate',foo.getdata('fx_rate','currency',newValue,'rate'));
 	}
-	if(oldValue != newValue){
-		var ga = new GlideAjax('dxc_approvalApplication_getData');
-	ga.addParam('sysparm_name','getdataAjax');
-	ga.addParam('sysparm_field','currency');
-	ga.addParam('sysparm_value',newValue);
-	ga.addParam('sysparm_rfield','rate');
-	ga.getXML(callback);
+	//check if it new record => prevent this cript runs when open an existing record
+	if(g_form.getValue('submitted_by') == ''){
+		//check if local_business has change
+		if(oldValue != newValue){
+			var ga = new GlideAjax('dxc_approvalApplication_getData');
+			ga.addParam('sysparm_name','getdataAjax');
+			ga.addParam('sysparm_field','currency');
+			ga.addParam('sysparm_value',newValue);
+			ga.addParam('sysparm_rfield','rate');
+			ga.getXML(callback);
+		}
+		//because local_currency had been set in business rule so this script will run on display
+		var val = g_form.getDisplayBox('local_currency').value+'_GBP';
+		var gaGBP = new GlideAjax('x_241348_dxcapp.dxc_GBP_Converter');
+		gaGBP.addParam('sysparm_name','getGBPAjax');
+		gaGBP.addParam('sysparm_currency', val);
+		gaGBP.getXML(callback2);
 	}
-	
 	function callback(response){
 		var exchange = response.responseXML.documentElement.getAttribute('answer');
-		if(exchange != ''){
+		if(exchange != '')
 			g_form.setValue('exchange_rate',exchange);
-// 			g_form.setValue('gbp',Math.round(exchange * 1.5700));
-		}
+	}
+	function callback2(response){
+		var gbp = response.responseXML.documentElement.getAttribute('answer');
+		g_form.setValue('gbp',gbp);
 	}
 	//Type appropriate comment here, and begin script below
+	
+	
 	
 }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
@@ -39,7 +51,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>bbdda27c379313002efeded993990e19</sys_id>
-        <sys_mod_count>35</sys_mod_count>
+        <sys_mod_count>69</sys_mod_count>
         <sys_name>fill exchange rate</sys_name>
         <sys_overrides/>
         <sys_package display_value="DXC Docs Approval" source="x_241348_dxcapp">a05a6686377213002efeded993990e4c</sys_package>
@@ -47,7 +59,7 @@
         <sys_scope display_value="DXC Docs Approval">a05a6686377213002efeded993990e4c</sys_scope>
         <sys_update_name>sys_script_client_bbdda27c379313002efeded993990e19</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-07-13 05:58:23</sys_updated_on>
+        <sys_updated_on>2018-07-18 08:00:40</sys_updated_on>
         <table>x_241348_dxcapp_approval_request</table>
         <type>onChange</type>
         <ui_type>0</ui_type>
