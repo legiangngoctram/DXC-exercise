@@ -5,20 +5,37 @@
         <applies_extended>false</applies_extended>
         <condition/>
         <description>check if the link is in right regular expression</description>
-        <field>approved_with_condition</field>
+        <field>dxc_web_link</field>
         <global>true</global>
         <messages/>
         <name>validate link</name>
         <order/>
-        <script><![CDATA[function onSubmit() {
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+	if (isLoading || newValue === '') {
+	}
 	//Type appropriate comment here, and begin script below
 	if(g_form.isNewRecord()){
-		var url = g_form.getValue('dxc_web_link');
-		var re = /^(http[s]?:\/\/){0,1}(www\.){0,1}[a-zA-Z0-9\.\-]+\.[a-zA-Z]{2,5}[\.]{0,1}/;
+		if(oldValue != newValue){
+			var url = g_form.getValue('dxc_web_link');
+			var ga = new GlideAjax('x_241348_dxcapp.dxc_create_validateURL');
+			ga.addParam('sysparm_name','checkURL');
+			ga.addParam('sysparm_url',url);
+			ga.getXML(callback);
+		}
+		/*var re = /^(http[s]?:\/\/){0,1}(www\.){0,1}[a-zA-Z0-9\.\-]+\.[a-zA-Z]{2,5}[\.]{0,1}/;
 			if(!re.test(url)){
 				g_form.showFieldMsg('dxc_web_link',
-									'invalid web link, Please check.','error');
+				'invalid web link, Please check.','error');
 				return false;
+			}*/
+		}
+		function callback(response){
+			var res = response.responseXML.documentElement.getAttribute('answer');
+			
+			if(res == 'false'){
+				g_form.setValue('dxc_web_link','');
+				g_form.showFieldMsg('dxc_web_link',
+				'invalid web link, Please check','error');
 			}
 		}
 	}]]></script>
@@ -28,7 +45,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>59e57342371713002efeded993990e4e</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>validate link</sys_name>
         <sys_overrides/>
         <sys_package display_value="DXC Docs Approval" source="x_241348_dxcapp">a05a6686377213002efeded993990e4c</sys_package>
@@ -36,9 +53,9 @@
         <sys_scope display_value="DXC Docs Approval">a05a6686377213002efeded993990e4c</sys_scope>
         <sys_update_name>sys_script_client_59e57342371713002efeded993990e4e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-07-19 06:18:41</sys_updated_on>
+        <sys_updated_on>2018-07-19 09:42:56</sys_updated_on>
         <table>x_241348_dxcapp_approval_request</table>
-        <type>onSubmit</type>
+        <type>onChange</type>
         <ui_type>0</ui_type>
         <view/>
     </sys_script_client>

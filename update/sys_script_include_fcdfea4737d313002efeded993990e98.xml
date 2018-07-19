@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_241348_dxcapp.dxc_create_validateURL</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>dxc_create_validateURL</name>
+        <script><![CDATA[var dxc_create_validateURL = Class.create();
+dxc_create_validateURL.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	createRESTMessage: function(url){
+		try {
+			var request = new sn_ws.RESTMessageV2();
+			request.setHttpMethod('get');
+			request.setEndpoint(url);
+			request.setLogLevel('All');
+			request.setHttpTimeout(20);
+			response = request.executeAsync();
+			return response.getStatusCode();
+		}catch (e){
+			gs.info('error : ' + e);
+		}
+	},
+	
+	checkURL: function(){
+		var url = this.getParameter('sysparm_url');
+		var res = this.createRESTMessage(url);
+		if(res >= 200 && res < 300){
+			return true;
+		}
+		return false;
+	},
+	type: 'dxc_create_validateURL'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-07-19 09:22:15</sys_created_on>
+        <sys_id>fcdfea4737d313002efeded993990e98</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>dxc_create_validateURL</sys_name>
+        <sys_package display_value="DXC Docs Approval" source="x_241348_dxcapp">a05a6686377213002efeded993990e4c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="DXC Docs Approval">a05a6686377213002efeded993990e4c</sys_scope>
+        <sys_update_name>sys_script_include_fcdfea4737d313002efeded993990e98</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-07-19 09:22:15</sys_updated_on>
+    </sys_script_include>
+</record_update>
