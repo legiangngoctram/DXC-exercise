@@ -5,7 +5,7 @@
         <active>true</active>
         <client>false</client>
         <comments/>
-        <condition>gs.hasRole('x_241348_dxcapp.DXC Leader') &amp;&amp; current.state == 'WaittingLeader' || gs.hasRole('x_241348_dxcapp.DXC PM')  &amp;&amp; current.state == 'WaittingPMApprover';</condition>
+        <condition>gs.hasRole('x_241348_dxcapp.DXC Leader') &amp;&amp; current.next_approver == 'DXC Leader' || gs.hasRole('x_241348_dxcapp.DXC PM')  &amp;&amp; current.next_approver == 'DXC PM';</condition>
         <form_action>true</form_action>
         <form_button>true</form_button>
         <form_context_menu>false</form_context_menu>
@@ -24,12 +24,19 @@
         <onclick/>
         <order>200</order>
         <script><![CDATA[//check if approve with conditions
-if (current.conditions.getJournalEntry(-1) == ''){
+var notes = current.conditions.getJournalEntry(-1);
+if (current.state == 'ApproveWithCondition'){
 	var foo = new DXC_requestForApproval_updateApprovalRecord();
 	foo.updateApproval(gs.getUserID(),current.sys_id,'approved');
 }
-current.approved_with_condition = false;
-current.update();
+if (notes == ''){
+	var foo = new DXC_requestForApproval_updateApprovalRecord();
+	foo.updateApproval(gs.getUserID(),current.sys_id,'approved');
+}else {
+	if (notes.search(gs.getUserDisplayName()) != -1){
+		current.update();
+	}
+}
 ]]></script>
         <show_insert>false</show_insert>
         <show_multiple_update>false</show_multiple_update>
@@ -41,7 +48,7 @@ current.update();
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>e196dcb337f213002efeded993990e74</sys_id>
-        <sys_mod_count>37</sys_mod_count>
+        <sys_mod_count>43</sys_mod_count>
         <sys_name>Approve</sys_name>
         <sys_overrides/>
         <sys_package display_value="DXC Docs Approval" source="x_241348_dxcapp">a05a6686377213002efeded993990e4c</sys_package>
@@ -49,7 +56,7 @@ current.update();
         <sys_scope display_value="DXC Docs Approval">a05a6686377213002efeded993990e4c</sys_scope>
         <sys_update_name>sys_ui_action_e196dcb337f213002efeded993990e74</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-07-19 06:55:19</sys_updated_on>
+        <sys_updated_on>2018-07-19 08:02:58</sys_updated_on>
         <table>x_241348_dxcapp_approval_request</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

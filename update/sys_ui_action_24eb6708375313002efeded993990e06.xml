@@ -2,10 +2,11 @@
 <record_update sys_domain="global" table="sys_ui_action">
     <sys_ui_action action="INSERT_OR_UPDATE">
         <action_name>Approve</action_name>
-        <active>true</active>
+        <active>false</active>
         <client>false</client>
-        <comments>approve with condition</comments>
-        <condition>current.state == 'ApproveWithCondition'  &amp;&amp; gs.hasRole('x_241348_dxcapp.DXC Leader') &amp;&amp; current.next_approver == 'DXC Leader' || gs.hasRole('x_241348_dxcapp.DXC PM')  &amp;&amp; current.next_approver == 'DXC PM';</condition>
+        <comments>approve with condition&#13;
+current.state == 'ApproveWithCondition'  &amp;&amp; gs.hasRole('x_241348_dxcapp.DXC Leader') &amp;&amp; current.next_approver == 'DXC Leader' || gs.hasRole('x_241348_dxcapp.DXC PM')  &amp;&amp; current.next_approver == 'DXC PM';</comments>
+        <condition/>
         <form_action>true</form_action>
         <form_button>true</form_button>
         <form_context_menu>false</form_context_menu>
@@ -38,7 +39,7 @@ action.setRedirectURL(current);
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>24eb6708375313002efeded993990e06</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name>Approve</sys_name>
         <sys_overrides/>
         <sys_package display_value="DXC Docs Approval" source="x_241348_dxcapp">a05a6686377213002efeded993990e4c</sys_package>
@@ -46,7 +47,7 @@ action.setRedirectURL(current);
         <sys_scope display_value="DXC Docs Approval">a05a6686377213002efeded993990e4c</sys_scope>
         <sys_update_name>sys_ui_action_24eb6708375313002efeded993990e06</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-07-19 06:55:24</sys_updated_on>
+        <sys_updated_on>2018-07-19 07:46:04</sys_updated_on>
         <table>x_241348_dxcapp_approval_request</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
