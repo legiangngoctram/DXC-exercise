@@ -9,7 +9,7 @@
         <action_update>false</action_update>
         <active>true</active>
         <add_message>false</add_message>
-        <advanced>false</advanced>
+        <advanced>true</advanced>
         <change_fields>false</change_fields>
         <client_callable>false</client_callable>
         <collection>x_241348_dxcapp_approval_request</collection>
@@ -31,8 +31,8 @@
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
 
 	// Add your code here
-	
-	
+	if(current.gbp == '')
+		current.setAbortAction(true);	
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -40,7 +40,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>8e185594370313002efeded993990e73</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name>DXC_Create New DXC Request_Insert</sys_name>
         <sys_overrides/>
         <sys_package display_value="DXC Docs Approval" source="x_241348_dxcapp">a05a6686377213002efeded993990e4c</sys_package>
@@ -48,7 +48,7 @@
         <sys_scope display_value="DXC Docs Approval">a05a6686377213002efeded993990e4c</sys_scope>
         <sys_update_name>sys_script_8e185594370313002efeded993990e73</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-07-04 07:46:08</sys_updated_on>
+        <sys_updated_on>2018-07-19 06:21:22</sys_updated_on>
         <template>submitted_byDYNAMIC90d1921e5f510100a9ad2572f2b477fe^submission_date=javascript:new GlideDateTime()^EQ</template>
         <when>before</when>
     </sys_script>

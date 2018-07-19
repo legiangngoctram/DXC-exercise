@@ -11,7 +11,7 @@
         <form_context_menu>false</form_context_menu>
         <form_link>false</form_link>
         <form_style>primary</form_style>
-        <hint>To pass over to PM</hint>
+        <hint>Approve this request</hint>
         <list_action>false</list_action>
         <list_banner_button>false</list_banner_button>
         <list_button>false</list_button>
@@ -30,7 +30,6 @@ if (current.conditions.getJournalEntry(-1) == ''){
 }
 current.approved_with_condition = false;
 current.update();
-action.setRedirectURL(current);
 ]]></script>
         <show_insert>false</show_insert>
         <show_multiple_update>false</show_multiple_update>
@@ -42,7 +41,7 @@ action.setRedirectURL(current);
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>e196dcb337f213002efeded993990e74</sys_id>
-        <sys_mod_count>35</sys_mod_count>
+        <sys_mod_count>37</sys_mod_count>
         <sys_name>Approve</sys_name>
         <sys_overrides/>
         <sys_package display_value="DXC Docs Approval" source="x_241348_dxcapp">a05a6686377213002efeded993990e4c</sys_package>
@@ -50,7 +49,7 @@ action.setRedirectURL(current);
         <sys_scope display_value="DXC Docs Approval">a05a6686377213002efeded993990e4c</sys_scope>
         <sys_update_name>sys_ui_action_e196dcb337f213002efeded993990e74</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-07-16 07:15:23</sys_updated_on>
+        <sys_updated_on>2018-07-19 06:55:19</sys_updated_on>
         <table>x_241348_dxcapp_approval_request</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
